@@ -1,4 +1,4 @@
-{ inputs, lib, ... }:
+{ inputs, ... }:
 {
   imports = [ inputs.lix-module.darwinModules.default ];
 
@@ -16,15 +16,11 @@
     ];
     linux-builder = {
       enable = true;
-      systems = [ "aarch64-linux" ];
+      systems = [
+        "aarch64-linux"
+        "x86_64-linux"
+      ];
       maxJobs = 8;
-      config = {
-        virtualisation = {
-          cores = lib.mkForce 8;
-          memorySize = lib.mkForce 24576;
-          diskSize = lib.mkForce 200000;
-        };
-      };
     };
   };
 }

@@ -29,17 +29,6 @@
   (setq mac-use-native-fullscreen t))
 #+END_SRC
 
-* Claudemacs
-#+BEGIN_SRC emacs-lisp
-(use-package! claudemacs
-  :after eat
-  :config
-  (define-key prog-mode-map (kbd "C-c C-e") #'claudemacs-transient-menu)
-  (global-auto-revert-mode t)
-  (with-eval-after-load 'eat
-    (setq eat-term-scrollback-size 400000)))
-#+END_SRC
-
 * Projects
 #+BEGIN_SRC emacs-lisp
 (setq +workspaces-on-switch-project-behavior t)
@@ -56,4 +45,10 @@
 (use-package! lsp-tailwindcss
   :after lsp-mode
   :init (setq lsp-tailwindcss-add-on-mode t))
+#+END_SRC
+
+* env load
+#+BEGIN_SRC emacs-lisp
+(when (memq window-system '(mac ns x))
+ (exec-path-from-shell-initialize))
 #+END_SRC
