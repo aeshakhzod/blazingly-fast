@@ -38,22 +38,22 @@
       ls = "eza";
     };
 
-    initContent = lib.mkAfter ''
-      export BLAZINGLY_FAST="$HOME/blazingly-fast"
-      export NIX_SHELL_WORKSPACE="$HOME/dev/nix-shell-workspace"
+    initContent = lib.mkMerge [
+      (lib.mkAfter ''
+        export BLAZINGLY_FAST="$HOME/blazingly-fast"
 
-      if [ -f "$HOME/.zshrc_custom" ]; then
-        source "$HOME/.zshrc_custom"
-      fi
+        if [ -f "$HOME/.zshrc_custom" ]; then
+          source "$HOME/.zshrc_custom"
+        fi
 
-      export PATH="$PATH:$HOME/.local/bin"
+        export PATH="$PATH:$HOME/.local/bin"
+      '')
 
-      ${lib.optionalString isDarwin ''
-        eval "$(brew shellenv)"
-      ''}
-
-      eval "$(fnm env)"
-    '';
-
+      (lib.optionalString isDarwin ''
+        if [ -f /opt/homebrew/bin/brew ]; then
+          eval "$(/opt/homebrew/bin/brew shellenv)"
+        fi
+      '')
+    ];
   };
 }

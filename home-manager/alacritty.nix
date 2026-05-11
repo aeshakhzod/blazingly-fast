@@ -32,12 +32,12 @@
             action = "CreateNewTab";
           }
           {
-            key = "I";
+            key = "E";
             mods = "Command|Shift";
             action = "SelectNextTab";
           }
           {
-            key = "H";
+            key = "P";
             mods = "Command|Shift";
             action = "SelectPreviousTab";
           }

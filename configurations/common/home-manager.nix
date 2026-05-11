@@ -4,6 +4,7 @@
   m,
   isDarwin,
   isLinux,
+  pkgs-unstable,
   ...
 }:
 {
@@ -17,6 +18,7 @@
         m
         isDarwin
         isLinux
+        pkgs-unstable
         ;
     };
     sharedModules = [

@@ -1,15 +1,14 @@
 {
   inputs,
   config,
-  pkgs,
   ...
 }:
 {
 
-  home.packages = with pkgs; [
-    # lem-webview
-    lem-ncurses
-  ];
+  # home.packages = with pkgs; [
+  #   # lem-webview
+  #   lem-ncurses
+  # ];
 
   home.file."${config.home.homeDirectory}/.lem".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/blazingly-fast/lem";

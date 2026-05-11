@@ -19,9 +19,9 @@
       "visual-studio-code"
       "zed"
       "postman"
-      "termius"
-      "mongodb-compass"
-      "jetbrains-toolbox"
+      # "termius"
+      # "mongodb-compass"
+      # "jetbrains-toolbox"
       # "proxyman"
       "utm"
       "little-snitch"
@@ -35,14 +35,12 @@
       "telegram"
       "element"
       # "zulip"
-      "microsoft-teams"
 
       # Utility Tools
       "syncthing-app"
       "bitwarden"
       "keymapp"
-      "wakatime"
-      "balenaetcher"
+      # "balenaetcher"
       "font-jetbrains-mono-nerd-font"
       "logi-options+"
       "piphero"
@@ -59,10 +57,11 @@
 
       # Productivity Tools
       "raycast"
+      "tomatobar"
 
       # Browsers
       "floorp"
-      "google-chrome"
+      "brave-browser"
       "thunderbird"
     ];
 

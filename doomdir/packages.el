@@ -7,6 +7,4 @@
 
 (package! eat)
 
-(package! lsp-tailwindcss :recipe (:host github :repo "merrickluo/lsp-tailwindcss"))
-
 (package! exec-path-from-shell)

@@ -23,7 +23,7 @@
        ;;layout            ; auie,ctsrnm is the superior home row
 
        :completion
-       ;;company           ; the ultimate code completion backend
+       company           ; the ultimate code completion backend
        (corfu +orderless)  ; complete with cap(f), cape and a flying feather!
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
@@ -80,10 +80,10 @@
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
-       ;;eshell            ; the elisp shell that works everywhere
-       ;;shell             ; simple shell REPL for Emacs
-       ;;term              ; basic terminal emulator for Emacs
-       vterm +native-compile             ; the best terminal emulation in Emacs
+       ;;eshell              ; the elisp shell that works everywhere
+       ;;shell               ; simple shell REPL for Emacs
+       ;;term                ; basic terminal emulator for Emacs
+       vterm +native-compile ; the best terminal emulation in Emacs
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
@@ -109,7 +109,7 @@
        ;;pdf               ; pdf enhancements
        ;;terraform         ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
-       tree-sitter       ; syntax and parsing, sitting in a tree...
+       ;;tree-sitter       ; syntax and parsing, sitting in a tree...
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :os
@@ -149,8 +149,8 @@
        ;;janet             ; Fun fact: Janet is me!
        ;;(java +lsp)       ; the poster child for carpal tunnel syndrome
        (javascript +lsp +tree-sitter)   ; all(hope(abandon(ye(who(enter(here))))))
-       (typescript +lsp)   ; TypeScript support
-       vue                 ; Vue.js support
+       (typescript +lsp +tree-sitter)   ; TypeScript support
+       ;;vue                 ; Vue.js support
        ;;julia             ; a better, faster MATLAB
        ;;kotlin            ; a better, slicker Java(Script)
        latex             ; writing papers in Emacs has never been so fun

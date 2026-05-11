@@ -47,7 +47,7 @@
 
     lix = {
       # https://git.lix.systems/lix-project/lix/tags
-      url = "https://git.lix.systems/lix-project/lix/archive/2.95.1.tar.gz";
+      url = "https://git.lix.systems/lix-project/lix/archive/2.95.3.tar.gz";
       flake = false;
     };
 

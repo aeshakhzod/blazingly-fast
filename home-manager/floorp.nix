@@ -9,9 +9,9 @@
         ublock-origin
         wappalyzer
         sidebery
-        wakatimes
         react-devtools
         bitwarden
+        youtube-recommended-videos
       ];
 
       settings = {

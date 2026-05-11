@@ -51,12 +51,7 @@
     texliveFull
     clipboard-jh
     tmatrix
-    wakatime-cli
 
-    fnm
-    # nodejs
-    # yarn
-    # pnpm
     uv
     python3
     android-tools

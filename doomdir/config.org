@@ -19,6 +19,9 @@
 
 (setq org-directory "~/org/")
 (setq org-agenda-files '("~/org/"))
+
+(after! lsp-mode
+  (setq lsp-enable-suggest-server-download nil))
 #+END_SRC
 
 * Darwin related configurations
@@ -42,13 +45,26 @@
 
 * Tailwind CSS
 #+BEGIN_SRC emacs-lisp
-(use-package! lsp-tailwindcss
-  :after lsp-mode
-  :init (setq lsp-tailwindcss-add-on-mode t))
+(after! lsp-mode
+  (lsp-register-client
+   (make-lsp-client
+    :new-connection (lsp-stdio-connection '("tailwindcss-language-server" "--stdio"))
+    :activation-fn (lsp-activate-on "html" "css" "javascript" "typescript"
+                                    "javascriptreact" "typescriptreact" "vue")
+    :server-id 'tailwindcss
+    :priority -1
+    :add-on? t
+    :initialization-options (lambda () (list :userLanguages (ht)))
+    :notification-handlers (ht ("@/tailwindCSS/projectInitialized" #'ignore)
+                               ("@/tailwindCSS/projectsDestroyed" #'ignore)
+                               ("tailwindcss/configUpdated" #'ignore)
+                               ("tailwindcss/configError" #'ignore)))))
 #+END_SRC
 
 * env load
 #+BEGIN_SRC emacs-lisp
-(when (memq window-system '(mac ns x))
- (exec-path-from-shell-initialize))
+(use-package! exec-path-from-shell
+  :config
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize)))
 #+END_SRC
