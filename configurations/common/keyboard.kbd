@@ -11,12 +11,7 @@
   def (tap-hold 180 180 grv (layer-switch default))
   gal (tap-hold 180 180 grv (layer-switch gallium))
 
-  sym (tap-dance-eager 200 (
-    (tap-hold 200 200 
-      (one-shot 500 (layer-toggle symbols)) 
-      (layer-toggle symbols))
-    esc
-  ))
+  sym (tap-hold 200 200 esc (layer-toggle symbols))
   num (tap-hold 200 200 tab (layer-toggle numbers))
   mov (layer-toggle movement)
 
