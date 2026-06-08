@@ -1,0 +1,26 @@
+// Folder-specific settings
+//
+// For a full list of overridable settings, and general information on folder-specific settings,
+// see the documentation: https://zed.dev/docs/configuring-zed#settings-files
+{
+  "lsp": {
+    "nixd": {
+      "settings": {
+        "nixpkgs": {
+          "expr": "(import ./.zed/expr.nix).nixpkgs",
+        },
+        "options": {
+          "nixos": {
+            "expr": "(import ./.zed/expr.nix).options.nixos or null",
+          },
+          "home-manager": {
+            "expr": "(import ./.zed/expr.nix).options.home-manager or null",
+          },
+          "nix-darwin": {
+            "expr": "(import ./.zed/expr.nix).options.nix-darwin or null",
+          },
+        },
+      },
+    },
+  },
+}

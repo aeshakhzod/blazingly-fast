@@ -1,0 +1,61 @@
+// Folder-specific settings
+//
+// For a full list of overridable settings, and general information on folder-specific settings,
+// see the documentation: https://zed.dev/docs/configuring-zed#settings-files
+{
+  "disable_ai": true,
+  "use_system_window_tabs": false,
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true,
+  },
+  "title_bar": {
+    "show_branch_status_icon": true,
+  },
+  "terminal": {
+    "bell": "system",
+  },
+  "project_panel": {
+    "dock": "right",
+  },
+  "autosave": "on_focus_change",
+  "which_key": {
+    "enabled": true,
+  },
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": false,
+  },
+  "buffer_line_height": "comfortable",
+  "buffer_font_size": 14.0,
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_features": {
+    "calt": true,
+  },
+  "icon_theme": "Zed (Default)",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Light Hard",
+    "dark": "Gruvbox Dark Hard",
+  },
+  "load_direnv": "direct",
+  "languages": {
+    "Nix": {
+      "language_servers": ["!nil", "nixd"],
+    },
+  },
+  "auto_install_extensions": {
+    "rust": true,
+    "toml": true,
+    "nix": true,
+    "sql": true,
+    "xml": true,
+    "html": true,
+    "docker-compose": true,
+  },
+}

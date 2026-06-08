@@ -3,11 +3,12 @@
   pkgs,
   isDarwin,
   isLinux,
+  config,
   ...
 }:
 let
-  blazingly-fast = "~/blazingly-fast";
   inherit (pkgs) writeShellScriptBin;
+  inherit (config) blazingly-fast;
 
   rebuildCmd = if isDarwin then "sudo darwin-rebuild switch" else "sudo nixos-rebuild switch";
 
@@ -52,11 +53,18 @@ let
   '';
 in
 {
-  home.packages = [
-    nixrebuild
-    nixcleanup
-    nixupgrade
-    nixpull
-    nixpush
-  ];
+  options.blazingly-fast = lib.mkOption {
+    type = lib.types.str;
+    default = "${config.home.homeDirectory}/blazingly-fast";
+  };
+
+  config = {
+    home.packages = [
+      nixrebuild
+      nixcleanup
+      nixupgrade
+      nixpull
+      nixpush
+    ];
+  };
 }

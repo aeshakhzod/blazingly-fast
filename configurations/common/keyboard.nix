@@ -6,7 +6,7 @@ in
   environment.systemPackages = [
     kanata
     (pkgs.writeScriptBin "kanata-gallium" ''
-      sudo ${kanata}/bin/kanata -c ${./keyboard.kbd}
+      sudo ${kanata}/bin/kanata -c ${../../dotfiles/keyboard.kbd}
     '')
   ];
 }

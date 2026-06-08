@@ -1,9 +1,6 @@
 { pkgs, ... }:
 {
-  xdg.configFile.astronvim = {
-    source = ../astronvim;
-    recursive = true;
-  };
+  my-dotfiles.".config/astronvim" = "astronvim";
 
   programs.neovim = {
     enable = true;

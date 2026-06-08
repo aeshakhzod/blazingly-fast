@@ -22,8 +22,7 @@
         ;
     };
     sharedModules = [
-      inputs.sops-nix.homeManagerModules.sops
-      m.secrets
+      inputs.zed-extensions.homeManagerModules.default
     ];
   };
 }

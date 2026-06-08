@@ -1,6 +1,0 @@
-{ ... }:
-{
-  programs.opencode = {
-    enable = true;
-  };
-}

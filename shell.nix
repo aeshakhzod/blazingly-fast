@@ -3,16 +3,6 @@
   system,
   pkgs,
 }:
-let
-  inherit
-    (pkgs.callPackage ./secrets/scripts.nix {
-      inherit pkgs;
-      inherit (inputs) opsops;
-    })
-    opsops-full
-    prepare-sops
-    ;
-in
 pkgs.mkShellNoCC {
   packages = with pkgs; [
     inputs.self.formatter.${system}
@@ -23,9 +13,6 @@ pkgs.mkShellNoCC {
     statix
 
     git
-
-    opsops-full
-    prepare-sops
   ];
 
   shellHook = ''

@@ -25,8 +25,8 @@
       # "proxyman"
       "utm"
       "little-snitch"
-      "figma"
-      "flutter"
+      # "figma"
+      # "flutter"
       # "android-studio"
       "racket"
 
@@ -40,20 +40,22 @@
       "syncthing-app"
       "bitwarden"
       "keymapp"
-      # "balenaetcher"
+      "balenaetcher"
       "font-jetbrains-mono-nerd-font"
       "logi-options+"
       "piphero"
       "transmission"
-      "claude-code@latest"
       "tailscale-app"
       "macs-fan-control"
+      "libreoffice"
 
       # Entertainment Tools
       "vlc"
       "spotify"
       "obs"
       "obsidian"
+      "prismlauncher"
+      "steam"
 
       # Productivity Tools
       "raycast"
@@ -69,6 +71,9 @@
       autoUpdate = true;
       cleanup = "uninstall";
       upgrade = true;
+      extraFlags = [
+        "--force-cleanup"
+      ];
     };
 
     # These app IDs are from using the mas CLI app

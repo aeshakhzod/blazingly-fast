@@ -10,7 +10,7 @@
 
     overlays = [
       inputs.nur.overlays.default
-      inputs.lem.overlays.default
+      inputs.zed-extensions.overlays.default
 
       # direnv: CGO needed for -linkmode=external on darwin
       (_final: prev: {
