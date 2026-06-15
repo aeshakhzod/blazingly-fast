@@ -7,36 +7,29 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
-    "bindings": {
-      // "shift shift": "file_finder::Toggle"
-    },
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      // "j k": "vim::NormalBefore",
-    },
-  },
-  // {
-  //   "context": "Editor && vim_mode == normal",
-  //   "bindings": {
-  //     "space w": "workspace::Save",
-  //     "space /": "vim::ToggleComments",
-  //     "space space": "command_palette::Toggle",
-  //   },
-  // },
-  // {
-  //   "context": "Editor && vim_mode == visual",
-  //   "bindings": {
-  //     "space /": "vim::ToggleComments",
-  //   },
-  // },
-  {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "bindings": {
       "alt-left": "vim::GoToPreviousTab",
       "alt-right": "vim::GoToTab",
     },
   },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "alt-left": "pane::ActivatePreviousItem",
+      "alt-right": "pane::ActivateNextItem",
+    },
+  },
+  {
+    "bindings": {
+      "alt-shift-right": "window::ShowNextWindowTab",
+      "alt-shift-left": "window::ShowPreviousWindowTab",
+    },
+  },
+  {
+    "context": "Terminal",
+    "unbind": {
+      "cmd-k": "terminal::Clear"
+    }
+  }
 ]

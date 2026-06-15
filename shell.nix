@@ -3,6 +3,9 @@
   system,
   pkgs,
 }:
+let
+  kanata-lsp = pkgs.callPackage ./packages/kanata-lsp.nix { };
+in
 pkgs.mkShellNoCC {
   packages = with pkgs; [
     inputs.self.formatter.${system}
@@ -13,6 +16,7 @@ pkgs.mkShellNoCC {
     statix
 
     git
+    kanata-lsp
   ];
 
   shellHook = ''

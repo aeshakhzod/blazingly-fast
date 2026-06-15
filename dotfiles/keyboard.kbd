@@ -1,4 +1,4 @@
-(defcfg 
+(defcfg
   process-unmapped-keys yes
   concurrent-tap-hold   yes
 )
@@ -39,6 +39,11 @@
   mu A-up
   mr A-right
 
+  kl (macro M-k M-left)
+  kd (macro M-k M-down)
+  ku (macro M-k M-up)
+  kr (macro M-k M-right)
+
   ;; thank you! https://github.com/niksingh710/ndots/blob/6d38ecab748bb8a9b812fe01628b53185f77567f/misc/kanata.macos.kbd
   ;; macOS function key glyphs
   mc C-up ;; Mission Control
@@ -53,7 +58,7 @@
   grv  1    2    3   4    5    6    7    8     9  0   -    =   bspc pgup
   tab  q    w    e   r    t    y    u    i     o  p   [    ]   \    pgdn
   caps a    s    d   f    g    h    j    k     l  ;   '    ret home
-  lsft z    x    c   v    b    n    m    ,     .  /   rsft up  end 
+  lsft z    x    c   v    b    n    m    ,     .  /   rsft up  end
   lctl lmet lalt spc ralt rctl left down right
 )
 
@@ -62,7 +67,7 @@
   @gal 1    2    3   4    5    6    7    8     9    0    -    =   bspc pgup
   tab  q    w    e   r    t    y    u    i     o    p    [    ]   \    pgdn
   caps a    s    d   f    g    h    j    k     l    ;    '    ret home
-  lsft z    x    c   v    b    n    m    ,     .    /    rsft up  end 
+  lsft z    x    c   v    b    n    m    ,     .    /    rsft up  end
   lctl lmet lalt spc ralt rctl left down right
 )
 
@@ -71,7 +76,7 @@
   @def 1    2    3   4    5    6    7    8     9    0    -    =   bspc pgup
   @num b    l    d   c    v    z    y    o     u    ,    /    XX  XX   pgdn
   @sym @n1  @r1  @t1 @s1  g    p    @h1  @a1   @e1  @i1  -    ret home
-  @mov q    x    m   w    j    k    f    '     ;    .    rsft up  end 
+  @mov q    x    m   w    j    k    f    '     ;    .    rsft up  end
   lctl lmet lalt spc ralt rctl left down right
 )
 
@@ -79,26 +84,25 @@
   _ _   _   _   _   _  _     _   _   _   _   _   _
   _ XX  XX  XX  XX  XX S-grv S-, S-. S-6 grv \   XX _  _
   _ XX  XX  XX  XX  XX S-\   [   ]   S-2 S-1 S-/ XX XX _
-  _ @n3 @r2 @t2 @s2 XX S-7   S-9 S-0 S-4 S-3 S-- _  _ 
-  _ XX  XX  XX  XX  XX =     S-[ S-] S-= S-8 S-5 _  _ 
-  _ _   _   _   _   _  _     _   _  
+  _ @n3 @r2 @t2 @s2 XX S-7   S-9 S-0 S-4 S-3 S-- _  _
+  _ XX  XX  XX  XX  XX =     S-[ S-] S-= S-8 S-5 _  _
+  _ _   _   _   _   _  _     _   _
 )
 
 (deflayer numbers
   _ _   _   _   _   _  _  _   _  _  _  _   _
   _ XX  XX  XX  XX  XX XX XX  XX XX XX XX  XX _  _
   _ XX  XX  XX  XX  XX -   7  8  9  /   XX XX XX _
-  _ @n2 @r2 @t2 @s2 XX S-= 4  5  6  S-8 XX _  _ 
-  _ XX  XX  XX  XX  XX 0   1  2  3  =   XX _  _ 
-  _ _   _   _   _   _  _  _   _  
+  _ @n2 @r2 @t2 @s2 XX S-= 4  5  6  S-8 XX _  _
+  _ XX  XX  XX  XX  XX 0   1  2  3  =   XX _  _
+  _ _   _   _   _   _  _  _   _
 )
 
 (deflayer movement
   _ _   _   _   _   _  _    _    _    _     _  _  _
   _ XX  XX  XX  XX  XX XX   XX   XX   XX    XX XX XX _  _
-  _ XX  XX  XX  XX  XX XX   XX   XX   XX    XX XX XX XX _
-  _ @n2 @r2 @t2 @s2 XX left down up   right XX XX _  _ 
-  _ XX  XX  XX  XX  XX @ml  @md  @mu  @mr   XX _  _  _ 
-  _ _   _   _   _   _  _    _    _   
+  _ XX  XX  XX  XX  XX @kl  @kd  @ku  @kr   XX XX XX XX _
+  _ @n2 @r2 @t2 @s2 XX left down up   right XX XX _  _
+  _ XX  XX  XX  XX  XX @ml  @md  @mu  @mr   XX _  _  _
+  _ _   _   _   _   _  _    _    _
 )
-

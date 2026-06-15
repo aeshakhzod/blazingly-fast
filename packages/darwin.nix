@@ -7,10 +7,7 @@
     ];
     brews = [
       "cocoapods"
-      # "dart"
       "gnupg"
-      "roswell"
-      "llvm"
     ];
     casks = [
       # Development Tools
@@ -34,7 +31,7 @@
       "discord"
       "telegram"
       "element"
-      # "zulip"
+      "zulip"
 
       # Utility Tools
       "syncthing-app"

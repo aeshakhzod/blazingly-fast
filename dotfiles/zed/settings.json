@@ -3,8 +3,9 @@
 // For a full list of overridable settings, and general information on folder-specific settings,
 // see the documentation: https://zed.dev/docs/configuring-zed#settings-files
 {
+  "cli_default_open_behavior": "new_window",
   "disable_ai": true,
-  "use_system_window_tabs": false,
+  "use_system_window_tabs": true,
   "tabs": {
     "close_position": "right",
     "file_icons": true,
@@ -19,7 +20,7 @@
   "project_panel": {
     "dock": "right",
   },
-  "autosave": "on_focus_change",
+  "autosave": "off",
   "which_key": {
     "enabled": true,
   },
@@ -57,5 +58,6 @@
     "xml": true,
     "html": true,
     "docker-compose": true,
+    "scheme": true,
   },
 }

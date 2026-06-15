@@ -9,6 +9,11 @@
     enable = true;
     packages = with pkgs.zed-extensions; [
       nix
+      wit
     ];
   };
+
+  home.packages = [
+    (pkgs.callPackage ./_wit-cli.nix { })
+  ];
 }
