@@ -14,6 +14,7 @@
   };
 
   home.packages = [
+    pkgs.zed-editor
     (pkgs.callPackage ./_wit-cli.nix { })
   ];
 }

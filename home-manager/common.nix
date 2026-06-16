@@ -2,7 +2,7 @@
 {
   home = {
     enableNixpkgsReleaseCheck = false;
-    stateVersion = "25.11";
+    stateVersion = "26.05";
   };
 
   targets.darwin.copyApps.enable = false;

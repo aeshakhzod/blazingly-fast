@@ -9,11 +9,12 @@
     _: relative:
     let
       path' = "${config.blazingly-fast}/dotfiles/${relative}";
-      source =
-        if builtins.pathExists path' then
-          path'
-        else
-          builtins.throw "Error: Required source file '${toString path'}' does not exist.";
+      # source =
+      #   if builtins.pathExists path' then
+      #     path'
+      #   else
+      #     builtins.throw "Error: Required source file '${toString path'}' does not exist.";
+      source = path';
     in
     {
       source = config.lib.file.mkOutOfStoreSymlink source;

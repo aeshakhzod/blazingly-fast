@@ -3,6 +3,18 @@
 // For a full list of overridable settings, and general information on folder-specific settings,
 // see the documentation: https://zed.dev/docs/configuring-zed#settings-files
 {
+  "edit_predictions": {
+    "allow_data_collection": "no",
+  },
+  "agent": {
+    "sidebar_side": "left",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "auto_update": false,
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": false,
+  },
   "cli_default_open_behavior": "new_window",
   "disable_ai": true,
   "use_system_window_tabs": true,
@@ -18,6 +30,12 @@
     "bell": "system",
   },
   "project_panel": {
+    "hide_hidden": false,
+    "hide_root": true,
+    "git_status_indicator": false,
+    "diagnostic_badges": false,
+    "bold_folder_labels": false,
+    "entry_spacing": "standard",
     "dock": "right",
   },
   "autosave": "off",

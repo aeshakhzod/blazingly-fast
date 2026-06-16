@@ -1,20 +1,19 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    android-studio
-    element-desktop
-    floorp-bin
-    google-chrome
     guvcview
     obs-studio
-    obsidian
     pinentry-all
-    postman
     spotify
     telegram-desktop
     vlc
     wl-clipboard
-    wpsoffice
     xclip
+    bitwarden-desktop
+    fractal
+  ];
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-39.8.10"
   ];
 }

@@ -11,7 +11,6 @@
     fzf
     killall
     lnav
-    neofetch
     openssh
     sqlite
     wget
@@ -43,18 +42,9 @@
     hunspell
     iftop
     jq
-    tmux
     tree
     unrar
     unzip
-    zsh-powerlevel10k
-    texliveFull
-    clipboard-jh
     tmatrix
-
-    uv
-    python3
-    android-tools
-    exercism
   ];
 }
