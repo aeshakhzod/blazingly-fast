@@ -28,29 +28,32 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware = {
-       url = "github:NixOS/nixos-hardware";
-       inputs.nixpkgs.follows = "nixpkgs";
-     };
+      url = "github:NixOS/nixos-hardware";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zed-extensions.url = "github:DuskSystems/nix-zed-extensions";
+    nix-doom-emacs-unstraightened = {
+      url = "github:marienz/nix-doom-emacs-unstraightened";
+      inputs.nixpkgs.follows = "";
+    };
+    lem = {
+      url = "github:lem-project/lem";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     xinux-modules = {
       url = "git+https://git.oss.uzinfocom.uz/xinux/modules?ref=main&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    lix = {
-      # https://git.lix.systems/lix-project/lix/tags
-      url = "https://git.lix.systems/lix-project/lix/archive/2.95.3.tar.gz";
-      flake = false;
     };
     lix-module = {
       # https://git.lix.systems/lix-project/nixos-module/tags
       url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.lix.follows = "lix";
     };
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     haumea = {
       url = "github:nix-community/haumea";
       inputs.nixpkgs.follows = "nixpkgs";

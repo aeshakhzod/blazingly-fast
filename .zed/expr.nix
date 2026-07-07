@@ -3,11 +3,7 @@ let
   flake = if hasFlake then builtins.getFlake (toString ../.) else null;
   hasInputs = flake != null && flake ? inputs.nixpkgs;
 
-  nixpkgs =
-    if hasInputs then
-      import flake.inputs.nixpkgs { }
-    else
-      import <nixpkgs> { };
+  nixpkgs = if hasInputs then import flake.inputs.nixpkgs { } else import <nixpkgs> { };
 
   # --- Helpers ---
   first = set: if set == { } then null else set.${builtins.head (builtins.attrNames set)};

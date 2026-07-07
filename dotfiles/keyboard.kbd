@@ -8,101 +8,79 @@
 )
 
 (defalias
-  def (tap-hold 180 180 grv (layer-switch default))
-  gal (tap-hold 180 180 grv (layer-switch gallium))
+  def (tap-hold 200 200 f1 (layer-switch default))
+  gal (tap-hold 200 200 f1 (layer-switch gallium))
 
-  sym (tap-hold 200 200 esc (layer-toggle symbols))
-  num (tap-hold 200 200 tab (layer-toggle numbers))
+  sym (tap-hold 120 120 esc (layer-toggle symbols))
+  num (tap-hold 160 160 tab (layer-toggle numbers))
   mov (layer-toggle movement)
 
-  n1 (tap-hold 180 180 n lmet)
-  n2 lmet
-  n3 (tap-hold 180 180 esc lmet)
-  r1 (tap-hold 180 180 r lalt)
-  r2 lalt
-  t1 (tap-hold 180 180 t lctl)
-  t2 lctl
-  s1 (tap-hold 180 180 s lsft)
-  s2 lsft
+  n (tap-hold 160 160 n lmet)
+  r (tap-hold 160 160 r lalt)
+  t (tap-hold 160 160 t lctl)
+  s (tap-hold 160 160 s lsft)
 
-  h1 (tap-hold 180 180 h rsft)
-  h2 rsft
-  a1 (tap-hold 180 180 a rctl)
-  a2 rctl
-  e1 (tap-hold 180 180 e ralt)
-  e2 ralt
-  i1 (tap-hold 180 180 i rmet)
-  i2 rmet
-
-  ml A-left
-  md A-down
-  mu A-up
-  mr A-right
-
-  kl (macro M-k M-left)
-  kd (macro M-k M-down)
-  ku (macro M-k M-up)
-  kr (macro M-k M-right)
-
-  ;; thank you! https://github.com/niksingh710/ndots/blob/6d38ecab748bb8a9b812fe01628b53185f77567f/misc/kanata.macos.kbd
-  ;; macOS function key glyphs
-  mc C-up ;; Mission Control
-  sls M-spc ;; Spotlight Search
-  dtn S-C-A-M-f5 ;; Dictation
-  dnd S-C-A-M-f6 ;; Do Not Disturb
-  lp S-C-A-M-l ;; Launchpad
+  h (tap-hold 160 160 h rsft)
+  a (tap-hold 160 160 a rctl)
+  e (tap-hold 160 160 e ralt)
+  i (tap-hold 160 160 i rmet)
 )
 
 (defsrc
-  esc  f1   f2   f3  f4   f5   f6   f7   f8    f9 f10 f11  f12
-  grv  1    2    3   4    5    6    7    8     9  0   -    =   bspc pgup
-  tab  q    w    e   r    t    y    u    i     o  p   [    ]   \    pgdn
-  caps a    s    d   f    g    h    j    k     l  ;   '    ret home
-  lsft z    x    c   v    b    n    m    ,     .  /   rsft up  end
-  lctl lmet lalt spc ralt rctl left down right
+  esc  f1
+  grv  1   2    3    4    5    6    7    8    9    0    -    =    bspc    pgup
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \     pgdn
+  caps   a    s    d    f    g    h    j    k    l    ;    '         ret  home
+  lsft    z    x    c    v    b    n    m    ,    .    /    rsft     up   end
+  lctl lmet lalt               spc               ralt    rctl   left down right
 )
 
-(deflayer default
-  esc  brdn brup @mc @sls @dtn @dnd prev pp    next mute vold volu
-  @gal 1    2    3   4    5    6    7    8     9    0    -    =   bspc pgup
-  tab  q    w    e   r    t    y    u    i     o    p    [    ]   \    pgdn
-  caps a    s    d   f    g    h    j    k     l    ;    '    ret home
-  lsft z    x    c   v    b    n    m    ,     .    /    rsft up  end
-  lctl lmet lalt spc ralt rctl left down right
+(deflayermap default
+  f1 @gal
+  _  _
 )
 
 (deflayer gallium
-  esc  brdn brup @mc @sls @dtn @dnd prev pp    next mute vold volu
-  @def 1    2    3   4    5    6    7    8     9    0    -    =   bspc pgup
-  @num b    l    d   c    v    z    y    o     u    ,    /    XX  XX   pgdn
-  @sym @n1  @r1  @t1 @s1  g    p    @h1  @a1   @e1  @i1  -    ret home
-  @mov q    x    m   w    j    k    f    '     ;    .    rsft up  end
-  lctl lmet lalt spc ralt rctl left down right
+  esc  @def
+  grv  1   2    3    4    5    6    7    8    9    0    -    =    bspc    pgup
+  @num  b    l    d    c    v    z    y    o    u    ,    /    ]    \     pgdn
+  @sym  @n   @r   @t   @s    g    p   @h   @a   @e   @i    -         ret  home
+  @mov    q    x    m    w    j    k    f    '    ;    .    rsft     up   end
+  lctl lmet lalt               spc               ralt    rctl   left down right
 )
 
-(deflayer symbols
-  _ _   _   _   _   _  _     _   _   _   _   _   _
-  _ XX  XX  XX  XX  XX S-grv S-, S-. S-6 grv \   XX _  _
-  _ XX  XX  XX  XX  XX S-\   [   ]   S-2 S-1 S-/ XX XX _
-  _ @n3 @r2 @t2 @s2 XX S-7   S-9 S-0 S-4 S-3 S-- _  _
-  _ XX  XX  XX  XX  XX =     S-[ S-] S-= S-8 S-5 _  _
-  _ _   _   _   _   _  _     _   _
+(deflayermap symbols
+  6 S-grv    7 S-,    8 S-.    9 S-6    0 grv    - \
+  y S-\      u [      i ]      o S-2    p S-1    [ S-/
+  h S-7      j S-9    k S-0    l S-4    ; S-3    ' S--
+  n =        m S-[    , S-]    . S-=    / S-8    rsft S-5
+
+  a lmet
+  s lalt
+  d lctl
+  f lsft
+  _ _
 )
 
-(deflayer numbers
-  _ _   _   _   _   _  _  _   _  _  _  _   _
-  _ XX  XX  XX  XX  XX XX XX  XX XX XX XX  XX _  _
-  _ XX  XX  XX  XX  XX -   7  8  9  /   XX XX XX _
-  _ @n2 @r2 @t2 @s2 XX S-= 4  5  6  S-8 XX _  _
-  _ XX  XX  XX  XX  XX 0   1  2  3  =   XX _  _
-  _ _   _   _   _   _  _  _   _
+(deflayermap numbers
+  u 7  i 8  o 9
+  j 4  k 5  l 6
+  m 1  , 2  . 3
+  n 0
+
+  a lmet
+  s lalt
+  d lctl
+  f lsft
+  _ _
 )
 
-(deflayer movement
-  _ _   _   _   _   _  _    _    _    _     _  _  _
-  _ XX  XX  XX  XX  XX XX   XX   XX   XX    XX XX XX _  _
-  _ XX  XX  XX  XX  XX @kl  @kd  @ku  @kr   XX XX XX XX _
-  _ @n2 @r2 @t2 @s2 XX left down up   right XX XX _  _
-  _ XX  XX  XX  XX  XX @ml  @md  @mu  @mr   XX _  _  _
-  _ _   _   _   _   _  _    _    _
+(deflayermap movement
+  h left     j down   k up     l right
+
+  a lmet
+  s lalt
+  d lctl
+  f lsft
+  _ _
 )

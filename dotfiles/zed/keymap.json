@@ -11,6 +11,8 @@
     "bindings": {
       "alt-left": "vim::GoToPreviousTab",
       "alt-right": "vim::GoToTab",
+      "ctrl-j": "terminal_panel::ToggleFocus",
+      "ctrl-w": "pane::CloseActiveItem",
     },
   },
   {
@@ -18,6 +20,8 @@
     "bindings": {
       "alt-left": "pane::ActivatePreviousItem",
       "alt-right": "pane::ActivateNextItem",
+      "ctrl-n": "workspace::NewTerminal",
+      "ctrl-w": "pane::CloseActiveItem",
     },
   },
   {
@@ -29,7 +33,13 @@
   {
     "context": "Terminal",
     "unbind": {
-      "cmd-k": "terminal::Clear"
-    }
-  }
+      "cmd-k": "terminal::Clear",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "ctrl-s": ["workspace::SendKeystrokes", "escape ctrl-s"],
+    },
+  },
 ]

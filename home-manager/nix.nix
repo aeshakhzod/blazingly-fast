@@ -1,5 +1,4 @@
-_:
-{
+_: {
   # xdg.configFile."nix/nix.conf".source = config.sops.templates."nix/nix.conf".path;
   #
   # sops.templates."nix/nix.conf".content = ''

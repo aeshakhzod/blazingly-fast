@@ -15,9 +15,9 @@ let
 
   replaceContents =
     string: set:
-    builtins.replaceStrings (builtins.map (k: "{${k}}") (
-      builtins.attrNames set
-    )) (builtins.map toString (builtins.attrValues set)) string;
+    builtins.replaceStrings (map (k: "{${k}}") (builtins.attrNames set)) (map toString (
+      builtins.attrValues set
+    )) string;
 
   loadModules =
     src:
@@ -46,7 +46,7 @@ let
     mods
     // {
       __all = collectPaths mods;
-      __without = exclude: collectPaths (builtins.removeAttrs mods exclude);
+      __without = exclude: collectPaths (removeAttrs mods exclude);
     };
 
   supportedSystems = [

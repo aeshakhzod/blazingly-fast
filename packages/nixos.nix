@@ -1,6 +1,10 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    usbutils
+    pciutils
+    dnsutils
+
     guvcview
     obs-studio
     pinentry-all
@@ -11,6 +15,12 @@
     xclip
     bitwarden-desktop
     fractal
+    obsidian
+    prismlauncher
+    resources
+    chromium
+
+    bruno
   ];
 
   nixpkgs.config.permittedInsecurePackages = [

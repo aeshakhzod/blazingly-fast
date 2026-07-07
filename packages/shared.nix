@@ -2,7 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     # General packages
-    alacritty
     aspell
     aspellDicts.en
     bash-completion
@@ -15,6 +14,8 @@
     sqlite
     wget
     zip
+    bintools
+    binutils
 
     # Rust rewrites
     bat

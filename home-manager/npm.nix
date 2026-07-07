@@ -8,5 +8,6 @@
     typescript-language-server
     tailwindcss-language-server
     typescript
+    package-version-server
   ];
 }
