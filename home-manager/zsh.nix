@@ -36,6 +36,7 @@
 
     shellAliases = {
       ls = "eza";
+      cat = "bat";
     };
 
     initContent = lib.mkMerge [

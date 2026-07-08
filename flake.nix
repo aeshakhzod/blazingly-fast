@@ -37,11 +37,16 @@
     };
     zed-extensions.url = "github:DuskSystems/nix-zed-extensions";
     nix-doom-emacs-unstraightened = {
-      url = "github:marienz/nix-doom-emacs-unstraightened";
+      # https://github.com/marienz/nix-doom-emacs-unstraightened/issues/133
+      url = "github:marienz/nix-doom-emacs-unstraightened/lix";
       inputs.nixpkgs.follows = "";
     };
     lem = {
       url = "github:lem-project/lem";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    bitritter = {
+      url = "git+https://codeberg.org/Chfkch/bitritter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     xinux-modules = {
@@ -53,7 +58,10 @@
       url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     haumea = {
       url = "github:nix-community/haumea";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     usbutils
@@ -19,6 +19,8 @@
     prismlauncher
     resources
     chromium
+    dconf-editor
+    vim
 
     bruno
   ];

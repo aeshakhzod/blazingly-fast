@@ -50,6 +50,7 @@ in
           "wheel"
           "docker"
         ];
+        hashedPassword = "$y$j9T$UKkcMoSeV8AvlKmvbhgvp0$b.qmZctDQ4gHsVpPZwTx6iQ4WO9K5eWn./ZW.7H5PzB";
         shell = lib.getExe pkgs.zsh;
       };
     })
