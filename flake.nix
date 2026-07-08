@@ -37,25 +37,15 @@
     };
     zed-extensions.url = "github:DuskSystems/nix-zed-extensions";
     nix-doom-emacs-unstraightened = {
-      # https://github.com/marienz/nix-doom-emacs-unstraightened/issues/133
-      url = "github:marienz/nix-doom-emacs-unstraightened/lix";
+      url = "github:marienz/nix-doom-emacs-unstraightened";
       inputs.nixpkgs.follows = "";
     };
     lem = {
       url = "github:lem-project/lem";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    bitritter = {
-      url = "git+https://codeberg.org/Chfkch/bitritter";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     xinux-modules = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/modules?ref=main&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    lix-module = {
-      # https://git.lix.systems/lix-project/nixos-module/tags
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
+      url = "git+https://git.oss.uzinfocom.uz/xinux/modules?ref=release-26.05&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     disko = {

@@ -6,6 +6,7 @@ in
   imports = [
     xinux-modules.nixosModules.efiboot
     xinux-modules.nixosModules.meta
+    xinux-modules.inputs.relago.nixosModules.default
   ];
 
   programs.firefox.enable = lib.mkForce false;
@@ -14,7 +15,9 @@ in
   modules.xinux = {
     nixSoftwareCenter.enable = false;
     xinuxModuleManager.enable = false;
-    binaryCompat.enable = true;
-    # eimzoIntegration.enable = false;
+    relago.enable = false;
+    eimzoIntegraion.enable = false;
+    binaryCompat.enable = false;
   };
+  aagl.enableNixpkgsReleaseBranchCheck = false;
 }

@@ -1,0 +1,3 @@
+{ ... }: {
+  programs.atool.enable = true;
+}

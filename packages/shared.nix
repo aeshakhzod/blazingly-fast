@@ -16,6 +16,7 @@
     zip
     bintools
     binutils
+    atool
 
     # Rust rewrites
     bat
@@ -33,7 +34,6 @@
     gnupg
     libfido2
     bundletool
-    rbw
 
     # Media
     ffmpeg

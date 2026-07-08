@@ -12,18 +12,18 @@
   gal (tap-hold 200 200 f1 (layer-switch gallium))
 
   sym (tap-hold 120 120 esc (layer-toggle symbols))
-  num (tap-hold 160 160 tab (layer-toggle numbers))
+  num (tap-hold 150 150 tab (layer-toggle numbers))
   mov (layer-toggle movement)
 
-  n (tap-hold 160 160 n lmet)
-  r (tap-hold 160 160 r lalt)
-  t (tap-hold 160 160 t lctl)
-  s (tap-hold 160 160 s lsft)
+  n (tap-hold 150 150 n lmet)
+  r (tap-hold 150 150 r lalt)
+  t (tap-hold 150 150 t lctl)
+  s (tap-hold 150 150 s lsft)
 
-  h (tap-hold 160 160 h rsft)
-  a (tap-hold 160 160 a rctl)
-  e (tap-hold 160 160 e ralt)
-  i (tap-hold 160 160 i rmet)
+  h (tap-hold 150 150 h rsft)
+  a (tap-hold 150 150 a rctl)
+  e (tap-hold 150 150 e ralt)
+  i (tap-hold 150 150 i rmet)
 )
 
 (defsrc
