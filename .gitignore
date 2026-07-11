@@ -1,5 +1,6 @@
-/result
+/result*
 /.direnv
 /.claude
 *~
 .sops.yaml # just in case
+*.qcow2
