@@ -1,11 +1,18 @@
 {
   den.aspects.desktop.gnome = {
-    nixos = {
+    nixos = { pkgs, ... }: {
       services = {
         displayManager.gdm.enable = true;
         desktopManager.gnome.enable = true;
         xserver.enable = true;
+        gnome = {
+          gnome-keyring.enable = true;
+          gcr-ssh-agent.enable = true;
+          sushi.enable = true;
+        };
       };
+
+      programs.ssh.askPassword = "${pkgs.gcr}/libexec/gcr-ssh-askpass";
 
       # Fix GNOME autologin
       systemd = {

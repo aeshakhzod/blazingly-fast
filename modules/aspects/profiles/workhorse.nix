@@ -19,6 +19,7 @@
 
       env.direnv
       env.git
+      env.ssh
       env.starship
       env.wezterm
       env.zsh
@@ -32,6 +33,8 @@
       communication.fractal
       communication.telegram
       communication.discord
+
+      work.kerio
     ];
   };
 }

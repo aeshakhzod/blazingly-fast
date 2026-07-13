@@ -16,6 +16,8 @@
           ".bg-shell"
         ];
 
+        extraConfig.credential.helper = "store";
+
         settings = {
           init.defaultBranch = "main";
           core = {
