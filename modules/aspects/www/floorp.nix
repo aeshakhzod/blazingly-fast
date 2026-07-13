@@ -1,7 +1,7 @@
 {
-  den.aspects.www.floorp = {
+  den.aspects.www.floorp = { host, ... }: {
     homeManager =
-      { pkgs, ... }:
+      { pkgs, lib, ... }:
       {
         # https://nur.nix-community.org/repos/rycee/
         programs.floorp = {
@@ -24,7 +24,7 @@
           };
         };
 
-        xdg.mimeApps = {
+        xdg.mimeApps = lib.mkIf (host == "linux") {
           enable = true;
           defaultApplications = {
             "text/html" = "floorp.desktop";

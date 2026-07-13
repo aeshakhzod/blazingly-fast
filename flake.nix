@@ -4,7 +4,9 @@
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 
   inputs = {
+    darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
     den.url = "github:denful/den";
+    den-diagram.url = "github:denful/den-diagram";
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
