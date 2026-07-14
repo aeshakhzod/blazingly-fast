@@ -12,8 +12,8 @@
       desktop.gnome
 
       editors.astronvim
-      editors.doom-emacs
-      editors.lem
+      # editors.doom-emacs
+      # editors.lem
       editors.zed
       editors.vscode
 

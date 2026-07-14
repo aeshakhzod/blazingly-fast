@@ -19,6 +19,8 @@
           sudo ${pkgs.kanata}/bin/kanata -c ${./keyboard.kbd}
         '')
       ];
+
+      homebrew.casks = ["karabiner-elements"];
     };
   };
 }

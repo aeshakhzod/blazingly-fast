@@ -20,6 +20,8 @@
             settings = {
               "browser.ctrlTab.sortByRecentlyUsed" = true;
               "floorp.browser.tabbar.settings" = 2;
+              "signon.rememberSignons" = false;
+              "signon.management.page.breach-alerts.enabled" = false;
             };
           };
         };
