@@ -2,9 +2,9 @@
   den.aspects.work.kerio = { host, ... }: {
     homeManager =
       { lib, ... }:
-      break {
-        home.packages = lib.mkMerge [
-          (lib.mkIf (host == "linux") self.packages.kerio-control-vpnclient)
+      {
+        home.packages = [
+          # (lib.mkIf (host.class == "nixos") self.packages.kerio-control-vpnclient)
         ];
       };
 

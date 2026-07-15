@@ -25,6 +25,7 @@
         enable = true;
         packages = with pkgs.zed-extensions; [
           biome
+          css-modules-kit
           docker-compose
           elisp
           env

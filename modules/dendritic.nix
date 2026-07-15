@@ -1,9 +1,16 @@
-{ inputs, lib, ... }:
+{
+  inputs,
+  lib,
+  den,
+  ...
+}:
 {
   imports = [
     (inputs.flake-file.flakeModules.dendritic or { })
     (inputs.den.flakeModules.dendritic or { })
   ];
+
+  flake.den = den;
 
   flake-file.inputs = {
     flake-file.url = "github:denful/flake-file";

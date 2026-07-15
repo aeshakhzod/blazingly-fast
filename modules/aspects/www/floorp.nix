@@ -26,7 +26,7 @@
           };
         };
 
-        xdg.mimeApps = lib.mkIf (host == "linux") {
+        xdg.mimeApps = lib.mkIf (host.class == "linux") {
           enable = true;
           defaultApplications = {
             "text/html" = "floorp.desktop";

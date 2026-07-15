@@ -11,6 +11,8 @@
 
       desktop.gnome
 
+      packages.npm
+
       editors.astronvim
       # editors.doom-emacs
       # editors.lem

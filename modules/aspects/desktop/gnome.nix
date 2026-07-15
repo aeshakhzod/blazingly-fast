@@ -1,6 +1,6 @@
 {
-  den.aspects.desktop.gnome = { pkgs, host, ... }: {
-    nixos = {
+  den.aspects.desktop.gnome = { host, ... }: {
+    nixos = { pkgs, ... }: {
       services = {
         displayManager.gdm.enable = true;
         desktopManager.gnome.enable = true;
@@ -29,7 +29,7 @@
 
     homeManager = { pkgs, ... }: {
       programs.gnome-shell = {
-        enable = host == "linux";
+        enable = host.class == "nixos";
         extensions = with pkgs.gnomeExtensions; [
           {
             id = "power-off-options@axelitama.github.io";
@@ -43,7 +43,7 @@
       };
 
       dconf = {
-        enable = host == "linux";
+        enable = host.class == "nixos";
         settings = {
           "org/gnome/desktop/interface" = {
             color-scheme = "prefer-dark";
