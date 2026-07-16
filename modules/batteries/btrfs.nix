@@ -6,6 +6,8 @@
         interval = "weekly";
         fileSystems = [ "/" ];
       };
+
+      virtualisation.docker.storageDriver = "btrfs";
     };
   };
 }

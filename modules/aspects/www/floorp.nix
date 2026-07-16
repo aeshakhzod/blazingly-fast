@@ -1,7 +1,20 @@
 {
-  den.aspects.www.floorp = { host, ... }: {
+  den.aspects.www.floorp = {
+    nixos = {
+      xdg.mime = {
+        enable = true;
+        defaultApplications = {
+          "text/html" = "floorp.desktop";
+          "x-scheme-handler/http" = "floorp.desktop";
+          "x-scheme-handler/https" = "floorp.desktop";
+          "x-scheme-handler/about" = "floorp.desktop";
+          "x-scheme-handler/unknown" = "floorp.desktop";
+        };
+      };
+    };
+
     homeManager =
-      { pkgs, lib, ... }:
+      { pkgs, ... }:
       {
         # https://nur.nix-community.org/repos/rycee/
         programs.floorp = {
@@ -25,17 +38,8 @@
             };
           };
         };
-
-        xdg.mimeApps = lib.mkIf (host.class == "linux") {
-          enable = true;
-          defaultApplications = {
-            "text/html" = "floorp.desktop";
-            "x-scheme-handler/http" = "floorp.desktop";
-            "x-scheme-handler/https" = "floorp.desktop";
-            "x-scheme-handler/about" = "floorp.desktop";
-            "x-scheme-handler/unknown" = "floorp.desktop";
-          };
-        };
       };
+
+    darwin.homebrew.casks = [ "floorp" ];
   };
 }

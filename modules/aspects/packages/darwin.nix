@@ -13,9 +13,6 @@
         casks = [
           # Development Tools
           "alacritty"
-          "docker-desktop"
-          "visual-studio-code"
-          "zed"
           "postman"
           # "termius"
           # "mongodb-compass"
@@ -31,7 +28,6 @@
           # Communication Tools
           "discord"
           "telegram"
-          "element"
           "zulip"
 
           # Utility Tools
@@ -52,17 +48,10 @@
           "spotify"
           "obs"
           "obsidian"
-          "prismlauncher"
-          "steam"
 
           # Productivity Tools
           "raycast"
           "tomatobar"
-
-          # Browsers
-          "floorp"
-          "brave-browser"
-          "thunderbird"
         ];
 
         onActivation = {

@@ -1,7 +1,7 @@
 {
   den.aspects.packages.wit-cli = {
     packages = { pkgs, ... }: {
-      kanata-lsp = pkgs.rustPlatform.buildRustPackage (finalAttrs: {
+      wit-cli = pkgs.rustPlatform.buildRustPackage (finalAttrs: {
         name = "wit-cli";
         version = "0.2.0";
 

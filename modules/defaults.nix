@@ -1,6 +1,5 @@
 { lib, den, ... }: {
   den.default.nixos.system.stateVersion = "26.05";
-  den.default.homeManager.home.stateVersion = "26.05";
   den.default.darwin.system.stateVersion = 7;
   den.default.os.home-manager = {
     useGlobalPkgs = true;
@@ -9,6 +8,10 @@
     # targets.darwin.copyApps.enable = false;
     # targets.darwin.linkApps.enable = false;
   };
+  den.default.homeManager = {
+    home.stateVersion = "26.05";
+  };
+  den.default.includes = [ den.batteries.self' ];
 
   den.schema.host.includes = [
     den.batteries.hostname

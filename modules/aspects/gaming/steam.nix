@@ -6,5 +6,6 @@
       gamescopeSession.enable = true;
       protontricks.enable = true;
     };
+    darwin.homebrew.casks = [ "steam" ];
   };
 }

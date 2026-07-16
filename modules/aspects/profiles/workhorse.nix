@@ -9,7 +9,9 @@
       desktop.mouse
       desktop.sound
 
-      desktop.gnome
+      # desktop.gnome
+      desktop.plasma
+      # desktop.cosmic
 
       packages.npm
 
@@ -25,6 +27,7 @@
       env.starship
       env.wezterm
       env.zsh
+      env.docker
 
       secrets.gpg
       secrets.rbw
@@ -32,7 +35,7 @@
       www.floorp
       www.thunderbird
 
-      communication.fractal
+      communication.matrix
       communication.telegram
       communication.discord
 
