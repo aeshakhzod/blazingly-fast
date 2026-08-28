@@ -1,6 +1,6 @@
 {
   den.aspects.env.git = {
-    homeManager = {
+    homeManager = { pkgs, ... }: {
       programs.git = {
         enable = true;
         lfs.enable = true;
@@ -16,7 +16,7 @@
           ".bg-shell"
         ];
 
-        extraConfig.credential.helper = "store";
+        extraConfig.credential.helper = "${pkgs.gitFull}/bin/git-credential-libsecret";
 
         settings = {
           init.defaultBranch = "main";

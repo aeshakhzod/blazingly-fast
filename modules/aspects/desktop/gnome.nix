@@ -1,6 +1,6 @@
 {
   den.aspects.desktop.gnome = { host, ... }: {
-    nixos = {
+    nixos = { pkgs, ... }: {
       services = {
         displayManager.gdm.enable = true;
         desktopManager.gnome.enable = true;
@@ -11,6 +11,10 @@
           sushi.enable = true;
         };
       };
+
+      environment.systemPackages = with pkgs; [
+        adwaita-icon-theme
+      ];
 
       # programs.ssh.askPassword = "${pkgs.gcr}/libexec/gcr-ssh-askpass";
 
@@ -53,6 +57,8 @@
             clock-format = "24h";
             clock-show-seconds = true;
             enable-animations = true;
+            cursor-theme = "Adwaita";
+            cursor-size = 24;
           };
           "org/gnome/system/locale" = {
             region = "uz_UZ.UTF-8";

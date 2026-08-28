@@ -1,5 +1,5 @@
 {
-  den.aspects.zed-editor.homeManager.programs.zed-editor = {
+  den.aspects.editors.zed.homeManager.programs.zed-editor = {
     mutableUserKeymaps = true;
     userKeymaps = [
       {

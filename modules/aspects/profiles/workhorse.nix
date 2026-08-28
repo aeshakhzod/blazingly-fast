@@ -9,8 +9,8 @@
       desktop.mouse
       desktop.sound
 
-      # desktop.gnome
-      desktop.plasma
+      desktop.gnome
+      # desktop.plasma
       # desktop.cosmic
 
       packages.npm
@@ -28,6 +28,7 @@
       env.wezterm
       env.zsh
       env.docker
+      env.tailscale
 
       secrets.gpg
       secrets.rbw
@@ -39,7 +40,9 @@
       communication.telegram
       communication.discord
 
+      work.libreoffice
       work.kerio
+      work.e-imzo
     ];
   };
 }
