@@ -9,7 +9,7 @@
         guvcview
         obs-studio
         pinentry-all
-        spotify
+        # spotify
         telegram-desktop
         vlc
         wl-clipboard

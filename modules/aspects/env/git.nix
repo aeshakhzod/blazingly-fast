@@ -16,8 +16,6 @@
           ".bg-shell"
         ];
 
-        extraConfig.credential.helper = "${pkgs.gitFull}/bin/git-credential-libsecret";
-
         settings = {
           init.defaultBranch = "main";
           core = {
@@ -28,6 +26,8 @@
           pull.rebase = true;
           rebase.autoStash = true;
           push.autoSetupRemote = true;
+          # credential.helper = "store";
+          credential.helper = "${pkgs.gitFull}/bin/git-credential-libsecret";
         };
       };
     };

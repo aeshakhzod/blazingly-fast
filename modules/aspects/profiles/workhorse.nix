@@ -9,6 +9,7 @@
       desktop.mouse
       desktop.sound
 
+      desktop.xinux
       desktop.gnome
       # desktop.plasma
       # desktop.cosmic
@@ -28,6 +29,7 @@
       env.wezterm
       env.zsh
       env.docker
+      # env.podman
       env.tailscale
 
       secrets.gpg

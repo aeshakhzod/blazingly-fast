@@ -44,8 +44,8 @@ in
         description = "Shakhzod";
         extraGroups = [
           "docker"
+          "kvm"
         ];
-        hashedPassword = "$y$j9T$UKkcMoSeV8AvlKmvbhgvp0$b.qmZctDQ4gHsVpPZwTx6iQ4WO9K5eWn./ZW.7H5PzB";
       };
     };
   };

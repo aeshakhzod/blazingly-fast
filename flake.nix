@@ -4,6 +4,7 @@
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 
   inputs = {
+    apple-silicon.url = "github:nix-community/nixos-apple-silicon";
     darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
     den.url = "github:denful/den";
     den-diagram.url = "github:denful/den-diagram";
@@ -45,6 +46,11 @@
         home-manager.follows = "home-manager";
         nixpkgs.follows = "nixpkgs";
       };
+    };
+    steam-asahi.url = "github:sm-idk/steam-asahi";
+    xinux-modules = {
+      url = "git+https://git.oss.uzinfocom.uz/xinux/modules?ref=release-26.05&shallow=1";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     zed-extensions.url = "github:DuskSystems/nix-zed-extensions";
   };

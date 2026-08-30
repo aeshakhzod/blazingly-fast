@@ -1,7 +1,9 @@
 {
   den.aspects.communication.discord = {
-    homeManager.programs.discord = {
-      enable = true;
+    homeManager = { pkgs, ... }: {
+      programs.discord = {
+        enable = !(pkgs.stdenv.hostPlatform.system == "aarch64-linux");
+      };
     };
   };
 }
