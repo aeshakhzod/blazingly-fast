@@ -1,0 +1,3 @@
+[submodule "qulf"]
+	path = qulf
+	url = ssh://git@codeberg.org/aeshakhzod/qulf.git
