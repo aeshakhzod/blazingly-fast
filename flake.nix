@@ -2,7 +2,7 @@
 # Use `nix run .#write-flake` to regenerate it.
 {
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
-
+  inputs.self.submodules = true;
   inputs = {
     apple-silicon.url = "github:nix-community/nixos-apple-silicon";
     darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-26.05";
@@ -46,6 +46,10 @@
         home-manager.follows = "home-manager";
         nixpkgs.follows = "nixpkgs";
       };
+    };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     steam-asahi.url = "github:sm-idk/steam-asahi";
     xinux-modules = {

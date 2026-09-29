@@ -12,6 +12,7 @@
 
         git
         # kanata-lsp
+        sops
       ];
 
       shellHook = ''

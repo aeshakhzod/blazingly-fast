@@ -33,7 +33,8 @@
       env.tailscale
 
       secrets.gpg
-      secrets.rbw
+      secrets.keepass
+      secrets.sops
 
       www.floorp
       www.thunderbird

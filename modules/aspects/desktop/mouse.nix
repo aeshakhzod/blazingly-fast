@@ -35,7 +35,7 @@
           name: "MX Master 3S";
 
           smartshift: { on: true; threshold: 30; torque: 50; };
-          hiresscroll: { hires: true; invert: false; target: false; };
+          hiresscroll: { hires: false; invert: false; target: false; };
 
           thumbwheel: { divert: false; invert: false; };
 
