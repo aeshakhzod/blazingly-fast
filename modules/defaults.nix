@@ -18,4 +18,6 @@
     den.batteries.host-aspects
   ];
   den.schema.user.classes = lib.mkDefault [ "homeManager" ];
+
+  flake-file.inputs.self.submodules = true;
 }

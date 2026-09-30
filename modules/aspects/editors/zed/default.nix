@@ -11,6 +11,10 @@
       kanata-lsp
     ];
 
+    os.nixpkgs.overlays = [
+      inputs.zed-extensions.overlays.default
+    ];
+
     os.home-manager.sharedModules = [
       inputs.zed-extensions.homeManagerModules.default
     ];

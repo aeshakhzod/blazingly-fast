@@ -3,6 +3,10 @@
     nixos.imports = [
       inputs.nur.modules.nixos.default
     ];
+
+    os.nixpkgs.overlays = [
+      inputs.nur.overlays.default
+    ];
   };
 
   flake-file.inputs.nur = {

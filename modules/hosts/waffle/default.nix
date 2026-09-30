@@ -17,7 +17,7 @@
       den.aspects.packages.global-packages
     ];
 
-    nixos = { pkgs, ... }: {
+    nixos = {
       imports = [
         ./_imports/hardware.nix
       ];

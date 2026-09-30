@@ -1,5 +1,9 @@
 { inputs, ... }: {
   den.aspects.editors.lem = {
+    os.nixpkgs.overlays = [
+      inputs.lem.overlays.default
+    ];
+
     homeManager = { config, pkgs, ... }: {
       home.packages = with pkgs; [
         # lem-webview

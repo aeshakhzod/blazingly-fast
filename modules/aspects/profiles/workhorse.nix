@@ -1,9 +1,6 @@
 { den, ... }: {
   den.aspects.profiles.workhorse = {
     includes = with den.aspects; [
-      env.nix
-      env.nur
-
       desktop.fonts
       desktop.keyboard
       desktop.mouse
@@ -18,19 +15,22 @@
 
       editors.astronvim
       # editors.doom-emacs
-      # editors.lem
+      editors.lem
       editors.zed
       editors.vscode
 
+      env.alacritty
       env.direnv
+      env.docker
       env.git
+      env.nix
+      env.nur
+      # env.podman
       env.ssh
       env.starship
+      # env.tailscale
       env.wezterm
       env.zsh
-      env.docker
-      # env.podman
-      env.tailscale
 
       secrets.gpg
       secrets.keepass
@@ -39,13 +39,12 @@
       www.floorp
       www.thunderbird
 
+      communication.discord
       communication.matrix
       communication.telegram
-      communication.discord
 
-      work.libreoffice
-      work.kerio
       work.e-imzo
+      work.libreoffice
     ];
   };
 }
