@@ -20,7 +20,7 @@
         '')
       ];
 
-      homebrew.casks = ["karabiner-elements"];
+      homebrew.casks = [ "karabiner-elements" ];
     };
   };
 }

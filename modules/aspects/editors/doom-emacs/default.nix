@@ -13,7 +13,7 @@
         programs.doom-emacs = {
           enable = true;
           doomDir = ./_doomdir;
-          # emacs = if isDarwin then pkgs.emacs-macport else pkgs.emacs;
+          emacs = pkgs.emacs-gtk;
           experimentalFetchTree = true;
           provideEmacs = true;
           tangleArgs = "--all config.org";

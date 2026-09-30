@@ -7,14 +7,9 @@
       user-mail-address "shakhzodkudratov@gmail.com")
 
 
-(setq doom-font-scale-factor 2)
-(defun doom-scale-font (base)
-  "Scale a base by a 'doom-font-scale-factor'"
-  (* base doom-font-scale-factor))
-
-(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size (doom-scale-font 12) :weight 'semi-light)
-      doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size (doom-scale-font 13))
-      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size (doom-scale-font 24)))
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size (* 12 1.5) :weight 'semi-light)
+      doom-variable-pitch-font (font-spec :family "JetBrainsMono Nerd Font" :size (* 13 1.5))
+      doom-big-font (font-spec :family "JetBrainsMono Nerd Font" :size (* 24 1.5)))
 
 (setq nerd-icons-font-family "JetBrainsMono Nerd Font")
 ;;
@@ -27,14 +22,6 @@
 
 (after! lsp-mode
   (setq lsp-enable-suggest-server-download nil))
-#+END_SRC
-
-* Darwin related configurations
-#+BEGIN_SRC emacs-lisp
-(defconst *is-a-mac* (eq system-type 'darwin))
-(when *is-a-mac*
-  (add-to-list 'default-frame-alist '(fullscreen . fullscreen))
-  (setq mac-use-native-fullscreen t))
 #+END_SRC
 
 * Projects
