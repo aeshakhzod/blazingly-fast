@@ -4,19 +4,21 @@
       imports = [ inputs.sops-nix.nixosModules.sops ];
 
       sops = {
-        gnupg.home = "/srv/.gnupg";
+        age.keyFile = "/home/shakhzod/.config/sops/age/keys.txt";
         defaultSopsFile = ../../../qulf/secrets/global.yaml;
         defaultSopsFormat = "yaml";
       };
     };
 
-    homeManager = { config, ... }: {
+    homeManager = {
       sops = {
-        gnupg.home = "${config.home.homeDirectory}/.gnupg";
+        age.keyFile = "/home/shakhzod/.config/sops/age/keys.txt";
         defaultSopsFile = ../../../qulf/secrets/global.yaml;
         defaultSopsFormat = "yaml";
       };
     };
+
+    # TODO: darwin (if necessary)
 
     os.home-manager.sharedModules = [
       inputs.sops-nix.homeManagerModules.sops

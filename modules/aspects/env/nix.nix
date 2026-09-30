@@ -1,23 +1,12 @@
 { inputs, ... }: {
   den.aspects.env.nix = {
-    os = { config, ... }: {
-      sops = {
-        secrets.nix-github-access-token = { };
-        templates."nix/nix.conf".content = ''
-          access-tokens = github.com=${config.sops.placeholder.nix-github-access-token}
-        '';
-      };
-
+    os = {
       nix = {
         enable = true;
 
         nixPath = [
           "nixpkgs=flake:nixpkgs"
         ];
-
-        extraOptions = ''
-          !include ${config.sops.templates."nix/nix.conf".path}
-        '';
 
         settings = {
           experimental-features = [
@@ -57,6 +46,21 @@
           inputs.zed-extensions.overlays.default
           inputs.lem.overlays.default
         ];
+      };
+    };
+
+    homeManager = { config, ... }: {
+      sops = {
+        secrets.nix-github-access-token = { };
+        templates."nix/nix.conf".content = ''
+          access-tokens = github.com=${config.sops.placeholder.nix-github-access-token}
+        '';
+      };
+
+      nix = {
+        extraOptions = ''
+          !include ${config.sops.templates."nix/nix.conf".path}
+        '';
       };
     };
   };
