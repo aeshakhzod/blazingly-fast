@@ -6,6 +6,7 @@
       core.ssh
       core.fail2ban
 
+      services.matrix
       services.website
     ];
   };
