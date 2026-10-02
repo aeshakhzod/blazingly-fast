@@ -7,17 +7,14 @@
     "nixd": {
       "settings": {
         "nixpkgs": {
-          "expr": "(import ./.zed/expr.nix).nixpkgs",
+          "expr": "(builtins.getFlake (builtins.toString ./.)).autocomplete.nixpkgs",
         },
         "options": {
           "nixos": {
-            "expr": "(import ./.zed/expr.nix).options.nixos or null",
+            "expr": "(builtins.getFlake (builtins.toString ./.)).autocomplete.nixos.options",
           },
           "home-manager": {
-            "expr": "(import ./.zed/expr.nix).options.home-manager or null",
-          },
-          "nix-darwin": {
-            "expr": "(import ./.zed/expr.nix).options.nix-darwin or null",
+            "expr": "(builtins.getFlake (builtins.toString ./.)).autocomplete.homeManager.options",
           },
         },
       },

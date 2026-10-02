@@ -14,7 +14,7 @@
       packages.npm
 
       editors.astronvim
-      editors.doom-emacs
+      # editors.doom-emacs
       # editors.lem
       editors.zed
       editors.vscode

@@ -11,7 +11,11 @@
   den.default.homeManager = {
     home.stateVersion = "26.05";
   };
-  den.default.includes = [ den.batteries.self' ];
+  den.default.includes = [
+    den.batteries.inputs'
+    den.batteries.self'
+    den.batteries.autocomplete
+  ];
 
   den.schema.host.includes = [
     den.batteries.hostname

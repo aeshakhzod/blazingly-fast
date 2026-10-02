@@ -17,7 +17,7 @@
       den.batteries.intel-v3
 
       den.aspects.profiles.workhorse
-      den.aspects.profiles.gaming
+      den.aspects.profiles.homelab
 
       den.aspects.packages.nixos-packages
       den.aspects.packages.global-packages
