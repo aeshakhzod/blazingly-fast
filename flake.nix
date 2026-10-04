@@ -21,14 +21,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     import-tree.url = "github:denful/import-tree";
-    lem = {
-      url = "github:lem-project/lem";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nix-doom-emacs-unstraightened = {
-      url = "github:marienz/nix-doom-emacs-unstraightened";
-      inputs.nixpkgs.follows = "";
-    };
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -53,10 +45,6 @@
     };
     sops-nix = {
       url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    xinux-modules = {
-      url = "git+https://git.oss.uzinfocom.uz/xinux/modules?ref=release-26.05&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zed-extensions.url = "github:DuskSystems/nix-zed-extensions";

@@ -6,15 +6,16 @@
       desktop.mouse
       desktop.sound
 
-      desktop.xinux
-      desktop.gnome
-      # desktop.plasma
+      # desktop.xinux
+      # desktop.gnome
+      desktop.plasma
       # desktop.cosmic
 
       packages.npm
 
       editors.astronvim
       # editors.doom-emacs
+      editors.emacs
       # editors.lem
       editors.zed
       editors.vscode
@@ -28,8 +29,8 @@
       # env.podman
       env.ssh
       env.starship
-      # env.tailscale
-      env.wezterm
+      env.tailscale
+      # env.wezterm
       env.zsh
 
       secrets.gpg

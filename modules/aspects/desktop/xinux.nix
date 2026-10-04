@@ -38,8 +38,8 @@ in
     };
   };
 
-  flake-file.inputs.xinux-modules = {
-    url = "git+https://git.oss.uzinfocom.uz/xinux/modules?ref=release-26.05&shallow=1";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
+  # flake-file.inputs.xinux-modules = {
+  #   url = "git+https://git.oss.uzinfocom.uz/xinux/modules?ref=release-26.05&shallow=1";
+  #   inputs.nixpkgs.follows = "nixpkgs";
+  # };
 }

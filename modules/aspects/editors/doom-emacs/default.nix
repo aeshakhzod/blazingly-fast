@@ -63,8 +63,8 @@
       };
   };
 
-  flake-file.inputs.nix-doom-emacs-unstraightened = {
-    url = "github:marienz/nix-doom-emacs-unstraightened";
-    inputs.nixpkgs.follows = "";
-  };
+  # flake-file.inputs.nix-doom-emacs-unstraightened = {
+  #   url = "github:marienz/nix-doom-emacs-unstraightened";
+  #   inputs.nixpkgs.follows = "";
+  # };
 }

@@ -1,7 +1,10 @@
 {
-  den.aspects.communication.matrix = { host, ... }: {
-    homeManager = { pkgs, lib, ... }: {
-      home.packages = [ (lib.mkIf (host.class == "nixos") pkgs.element-desktop) ];
+  den.aspects.communication.matrix = {
+    homeManager = { pkgs, ... }: {
+      home.packages = with pkgs; [
+        element-desktop
+        cinny-desktop
+      ];
     };
 
     darwin.homebrew.casks = [ "element" ];

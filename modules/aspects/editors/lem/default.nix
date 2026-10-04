@@ -20,8 +20,8 @@
     };
   };
 
-  flake-file.inputs.lem = {
-    url = "github:lem-project/lem";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
+  # flake-file.inputs.lem = {
+  #   url = "github:lem-project/lem";
+  #   inputs.nixpkgs.follows = "nixpkgs";
+  # };
 }
