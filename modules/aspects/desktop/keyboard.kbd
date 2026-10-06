@@ -24,6 +24,9 @@
   a (tap-hold 150 150 a rctl)
   e (tap-hold 150 150 e ralt)
   i (tap-hold 150 150 i rmet)
+
+  prevws C-M-left
+  nextws C-M-right
 )
 
 (defsrc
@@ -76,7 +79,9 @@
 )
 
 (deflayermap movement
-  h left     j down   k up     l right
+  y home     u pgdn    i pgup    o end
+  h left     j down    k up      l right
+             m @nextws , @prevws
 
   a lmet
   s lalt

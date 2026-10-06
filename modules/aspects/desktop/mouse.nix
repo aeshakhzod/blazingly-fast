@@ -47,8 +47,8 @@
               { direction: "None"; mode: "OnRelease"; action = { type: "Keypress"; keys: ["KEY_LEFTMETA"]; }; },
               { direction: "Up"; mode: "OnRelease"; action = { type: "Keypress"; keys: ["KEY_UP"]; }; },
               { direction: "Down"; mode: "OnRelease"; action = { type: "Keypress"; keys: ["KEY_DOWN"]; }; },
-              { direction: "Left"; mode: "OnRelease"; action = { type: "Keypress"; keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_RIGHT"]; }; },
-              { direction: "Right"; mode: "OnRelease"; action = { type: "Keypress"; keys: ["KEY_LEFTCTRL", "KEY_LEFTALT", "KEY_LEFT"]; }; }
+              { direction: "Left"; mode: "OnRelease"; action = { type: "Keypress"; keys: ["KEY_LEFTCTRL", "KEY_LEFTMETA", "KEY_RIGHT"]; }; },
+              { direction: "Right"; mode: "OnRelease"; action = { type: "Keypress"; keys: ["KEY_LEFTCTRL", "KEY_LEFTMETA", "KEY_LEFT"]; }; }
             ); }; },
             { cid: 0x56; action = { type: "Keypress"; keys: ["KEY_FORWARD"]; }; },
             { cid: 0x53; action = { type: "Keypress"; keys: ["KEY_BACK"]; }; }
