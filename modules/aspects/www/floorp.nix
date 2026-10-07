@@ -25,7 +25,6 @@
               ublock-origin
               sidebery
               react-devtools
-              bitwarden
               youtube-recommended-videos
               darkreader
             ];

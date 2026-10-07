@@ -32,7 +32,6 @@
 
           # Utility Tools
           "syncthing-app"
-          "bitwarden"
           "keymapp"
           "balenaetcher"
           "font-jetbrains-mono-nerd-font"

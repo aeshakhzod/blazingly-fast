@@ -13,16 +13,13 @@
       lib.mkMerge [
         {
           programs.ssh = {
-            # startAgent = true;
-
-            # Configure SSH askpass for GNOME
-            # enableAskPassword = lib.mkIf gnomeEnabled true;
-            # askPassword = lib.mkIf gnomeEnabled "${pkgs.openssh-askpass}/libexec/gtk-ssh-askpass";
-            # askPassword = lib.mkIf gnomeEnabled "${pkgs.seahorse.out}/libexec/seahorse/ssh-askpass";
+            enableAskPassword = true;
           };
+
           environment.sessionVariables = {
             # Forces SSH to prioritize the graphical askpass prompt even inside a TTY/Terminal
             SSH_ASKPASS_REQUIRE = "prefer";
+            SSH_ASKPASS = config.programs.ssh.askPassword;
           };
         }
         (lib.mkIf gnomeEnabled {
@@ -31,5 +28,12 @@
           services.gnome.gnome-keyring.enable = true;
         })
       ];
+
+    homeManager = { osConfig, ... }: {
+      # idk, weird error where SSH_ASKPASS is empty, even though everything is set
+      programs.zsh.initContent = ''
+        export SSH_ASKPASS="${osConfig.programs.ssh.askPassword}"
+      '';
+    };
   };
 }

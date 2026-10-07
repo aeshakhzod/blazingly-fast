@@ -19,6 +19,8 @@
         kdePackages.sddm-kcm # SDDM configuration module
         kdiff3 # File/directory comparison tool
 
+        kdePackages.ksshaskpass
+
         # Hardware/System Utilities (Optional)
         kdePackages.isoimagewriter # Write hybrid ISOs to USB
         kdePackages.partitionmanager # Disk and partition management
