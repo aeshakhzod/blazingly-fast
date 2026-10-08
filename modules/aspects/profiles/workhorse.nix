@@ -10,6 +10,7 @@
       # desktop.gnome
       desktop.plasma
       # desktop.cosmic
+      desktop.virtualisation
 
       packages.npm
 
